@@ -14,7 +14,7 @@ This project involves fine-tuning ByT5 and BART models for extracting product pr
 
 ## **Project Overview**
 
-This project uses paddleOCR to extract textual data from product images. Then transformer models are fine-tuned on extracted text to extract numeric product attributes from textual data (OCR outputs). By leveraging the ByT5 (Byte-to-Byte) and BART (Bidirectional and Auto-Regressive Transformers) models, we can efficiently handle varying input lengths and improve prediction accuracy for product attributes.
+This project uses paddleOCR to extract textual data from product images. Then, transformer models are fine-tuned on extracted text to extract numeric product attributes from textual data (OCR outputs). By leveraging the ByT5 (Byte-to-Byte) and BART (Bidirectional and Auto-Regressive Transformers) models, we can efficiently handle varying input lengths and improve prediction accuracy for product attributes.
 
 Both models were fine-tuned using a custom attention mechanism to emphasize the target entity in the input sequence, ensuring better performance for the attribute extraction task.
 
@@ -35,12 +35,13 @@ For ByT5, shorter numeric sequences are extracted to match its byte-based tokeni
 
 ### 1. Text Extraction Notebook
 This notebook focuses on extracting text from images using OCR techniques. The extracted text is preprocessed and cleaned for further use. Key steps include:
+- Random sampling of the training dataset.
 - Applying OCR to images.
-- Cleaning and filtering the text using regular expressions.
-- Preparing the data for the fine-tuning process.
 
 ### 2. Fine-Tuning Notebook
 This notebook is dedicated to fine-tuning BART and ByT5 models for extracting product attributes like weight, height, and volume from the preprocessed text. Key steps include:
+- Cleaning and filtering the text using regular expressions.
+- Preparing the data for the fine-tuning process.
 - Preprocessing and tokenizing the dataset.
 - Modifying the attention mechanism for the ByT5 model.
 - Fine-tuning both models and evaluating their performance using metrics like BLEU, BERT, and Exact Match scores.
