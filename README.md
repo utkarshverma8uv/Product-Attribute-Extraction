@@ -2,7 +2,7 @@
 
 This project involves fine-tuning ByT5 and BART models for extracting product properties such as height, weight, volume, and other attributes from OCR-generated text extracted using paddleOCR. The fine-tuned models are evaluated using metrics such as BLEU score, BERT score, and exact match in SI units.
 
-[tasveer.png](https://github.com/utkarshverma8uv/Product-Attribute-Extraction/blob/main/tasveer.png)
+![tasveer.png](https://github.com/utkarshverma8uv/Product-Attribute-Extraction/blob/main/tasveer.png)
 
 ## **Table of Contents**
 - [Project Overview](#project-overview)
